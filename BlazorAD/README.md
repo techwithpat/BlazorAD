@@ -1,0 +1,1 @@
+﻿This repository provides a comprehensive demonstration of how to secure a Blazor WebAssembly application using Azure Active Directory (AAD).
