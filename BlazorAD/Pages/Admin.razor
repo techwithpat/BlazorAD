@@ -1,0 +1,9 @@
+﻿@page "/admin"
+
+@attribute [Authorize(Policy = "superusers")]
+
+<h1>This page is for those with super power</h1>
+
+@code {
+
+}

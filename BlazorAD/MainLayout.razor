@@ -1,0 +1,19 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+<main>
+    <AuthorizeView>
+        <Authorized>
+            <button @onclick="LogOut" >Log out</button>
+            <h3>Welcome, @context.User.Identity?.Name</h3>
+        </Authorized>
+    </AuthorizeView>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/admin">Admin</a></li>
+    </ul>
+    @Body
+</main>
+
+@code {
+    void LogOut() => Navigation.NavigateToLogout("/authentication/logout", "/");
+}
